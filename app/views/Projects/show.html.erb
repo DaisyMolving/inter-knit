@@ -1,3 +1,23 @@
-<h1> this is the show page </h1>
+<h1><%= @project.name %></h1>
 
-<h2><%= @project.name %></h2>
+
+<div id="projectOverview">
+    <h1><%= @project.name %></h1>
+    <img src="http://jennozkan.com/wp-content/uploads/2010/12/crochet-scarf-7.jpg">
+  <button id="closeModal">Let's do it!</button>
+</div>  
+
+<nav class="navbar navbar-default" role="navigation">
+
+  <button id="show-button"> < </button>
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button id="hide-button"> > </button>
+      <h1>Instructions</h1>
+      <form id="route-form" class="form-inline">
+        <button id="next-stage" type="submit" class="i-am-done">I'm Done!</button>
+      </form> 
+    </div> 
+  </div>
+</nav>
