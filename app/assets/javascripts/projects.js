@@ -1,41 +1,43 @@
-
-
-
-function hideRetrievalButton(){
-  $('#show-button').hide();
-};
-
-function showRetrievalButton(){
-  $('#show-button').show();
-};
-
-function hideSidebar() {
-  $("#hide-button").on("click", function(){
-    console.log("clicked!");
-    $.when($(".navbar-header").toggle(function() {
-      $('.navbar-header').css('right', '0px')   
-    })).done(function(){
-      showRetrievalButton()
-    });  
-  });
-};
-
-function showSidebar() {
-  $("#show-button").on("click", function(){
-    $.when($(".navbar-header").toggle(function() {
-      $('.navbar-header').css('right', '0px')   
-    })).done(function(){
-      hideRetrievalButton()
-     });  
+function projectOverview() {
+  var height = window.innerHeight;
+  var width = window.innerWidth;
+  $("#projectOverview").dialog({
+    dialogClass: "no-close",
+    height: height,
+    width: width,
+    modal: true,
+    autoOpen: true,
+    hide: {
+        effect: "fadeOut",
+        duration: 1000
+    }
   });
 }
 
+function showSidebar() {
+  $(".navbar-header").toggle(function() {
+    $(".navbar-header").css("right", "0px")   
+  }) 
+}
+
+function hideSidebar() {
+  $("#next-stage").on("click", function(){
+    console.log("clicked!");
+    $.when($(".navbar-header").toggle(function() {
+      $(".navbar-header").hide();
+    })).done(function(){
+      $(".navbar-header").show(1000);
+    });
+  });   
+};
+
+
 $(document).ready(function(){
-
-console.log("hello");
-hideRetrievalButton();
-hideSidebar();
-showSidebar();
-
-
+  console.log("document ready");
+  hideSidebar();
+  projectOverview();
+  $("body").on("click", '.closeModal',function(){
+    console.log("click to close");
+    $("#projectOverview").dialog( "close" );
+  });
 });
