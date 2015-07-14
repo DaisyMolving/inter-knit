@@ -21,10 +21,10 @@
   <h1>Instructions</h1>
   
   <% @project_stage_instructions.each do |instruction| %>
-    <ul> 
+    <ol> 
       <li><%= instruction.content %></li> 
       <button id="howButton">How do I do this?</button>   
-    </ul>
+    </ol>
   <% end %>
   <button id="go-back" type="submit" class="missed-something"> Go Back </button>
   <button id="next-stage" type="submit" class="i-am-done">I'm Done!</button>
