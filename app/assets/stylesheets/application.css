@@ -34,3 +34,15 @@
 .no-close .ui-dialog-titlebar-close {
   display: none;
 }
+
+.nav-list-show {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.show-page-nav-item {
+  display: inline;
+  padding: 50px;
+}

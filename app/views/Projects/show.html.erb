@@ -1,3 +1,11 @@
+<nav id="show-page-navigation">
+  <ul class="nav-list-show">
+    <li class="show-page-nav-item"><a href="">Go To My Projects</a></li>
+    <li class="show-page-nav-item"><a href="">View All Stages of This Project</a></li> 
+    <li class="show-page-nav-item"><a href="/">Choose Another Project</a></li> 
+  </ul>
+</nav>
+
 <h1 class="project-title"><%= @project.name %> : <%= @project_stage.first.title %> </h1>
 
 
@@ -18,7 +26,7 @@
       <button id="howButton">How do I do this?</button>   
     </ul>
   <% end %>
-
+  <button id="go-back" type="submit" class="missed-something"> Go Back </button>
   <button id="next-stage" type="submit" class="i-am-done">I'm Done!</button>
 </div> 
 
