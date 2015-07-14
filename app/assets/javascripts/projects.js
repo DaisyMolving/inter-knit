@@ -1,18 +1,32 @@
-// function projectOverview() {
-//   var height = window.innerHeight;
-//   var width = window.innerWidth;
-//   $("#projectOverview").dialog({
-//     dialogClass: "no-close",
-//     height: height,
-//     width: width,
-//     modal: true,
-//     autoOpen: true,
-//     hide: {
-//         effect: "fadeOut",
-//         duration: 1000
-//     }
-//   });
-// }
+function projectOverview() {
+  var height = window.innerHeight;
+  var width = window.innerWidth;
+  $("#projectOverview").dialog({
+    dialogClass: "no-close",
+    height: height,
+    width: width,
+    modal: true,
+    autoOpen: true,
+    hide: {
+        effect: "fadeOut",
+        duration: 1000
+    }
+  });
+}
+
+function howToVideo() {
+  $("#howToVideo").dialog({
+    dialogClass: "no-close",
+    height: 500,
+    width: 500,
+    modal: true,
+    autoOpen: false,
+    hide: {
+        effect: "fadeOut",
+        duration: 1000
+    }
+  });
+}
 
 function showSidebar() {
   $(".navbar-header").toggle(function() {
@@ -35,10 +49,24 @@ function hideSidebar() {
 $(document).ready(function(){
   console.log("document ready");
   hideSidebar();
-  // projectOverview();
-  // $("body").on("click", '.closeModal',function(){
-  //   console.log("click to close");
-  //   $("#projectOverview").dialog( "close" );
-  // });
+  projectOverview();
+  $("body").on("click", '.closeModal',function(){
+    console.log("click to close");
+    $("#projectOverview").dialog( "close" );
+  });
+
+  $("#howToVideo").hide();
+
+  $("body").on("click", "#howButton", function(){
+      console.log("clicked the how");
+    $("#howToVideo").show();
+
+  });
+
+  $("body").on("click", '.i-know-how',function(){
+    console.log("click to close");
+    // $("#howToVideo").dialog( "close" );
+    $("#howToVideo").hide();
+  });
 });
 
