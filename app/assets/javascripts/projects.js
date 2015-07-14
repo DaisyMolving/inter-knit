@@ -36,8 +36,9 @@ $(document).ready(function(){
   console.log("document ready");
   hideSidebar();
   // projectOverview();
-  $("body").on("click", '.closeModal',function(){
-    console.log("click to close");
-    $("#projectOverview").dialog( "close" );
-  });
+  // $("body").on("click", '.closeModal',function(){
+  //   console.log("click to close");
+  //   $("#projectOverview").dialog( "close" );
+  // });
 });
+

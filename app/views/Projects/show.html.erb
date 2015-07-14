@@ -6,17 +6,26 @@
   <h2 class="modal-level"> Difficulty Level: <%= @project.difficulty_level %> </h2>
   <img src="http://jennozkan.com/wp-content/uploads/2010/12/crochet-scarf-7.jpg">
   <button class="closeModal">Let's start!</button>
-</div>   -->
- 
+</div> 
+  -->
 
 <div class="navbar-header">
   <h1>Instructions</h1>
   
   <% @project_stage_instructions.each do |instruction| %>
     <ul> 
-      <li><%= instruction.content %></li>    
+      <li><%= instruction.content %></li> 
+      <button id="howButton">How do I do this?</button>   
     </ul>
   <% end %>
 
   <button id="next-stage" type="submit" class="i-am-done">I'm Done!</button>
 </div> 
+
+<div id="howToVideo">
+  <h1 class="howToTitle"> Here is how! </h1>
+  <iframe src=""></iframe>
+  <button id="got-it" type="submit" class="i-know-how">
+  Ok, I understand!
+  </button>
+</div>
