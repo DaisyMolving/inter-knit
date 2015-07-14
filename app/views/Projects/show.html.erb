@@ -13,21 +13,22 @@
   <h1 class="modal-title"><%= @project.name %></h1>
   <h2 class="modal-level"> Difficulty Level: <%= @project.difficulty_level %> </h2>
   <img src="http://jennozkan.com/wp-content/uploads/2010/12/crochet-scarf-7.jpg">
-  <button class="closeModal">Let's start!</button>
+  <button class="closeModal" data-id="<%= @project.id %>">Let's start!</button>
 </div> 
  
 
 <div class="navbar-header">
   <h1>Instructions</h1>
   
-  <% @project_stage_instructions.each do |instruction| %>
-    <ol> 
-      <li><%= instruction.content %></li> 
-      <button id="howButton">How do I do this?</button>   
+    <ol id="instructions-list"> 
+    
+     <button id="howButton">How do I do this?</button>
+        
     </ol>
-  <% end %>
+
+
   <button id="go-back" type="submit" class="missed-something"> Go Back </button>
-  <button id="next-stage" type="submit" class="i-am-done">I'm Done!</button>
+  <button id="next-stage" type="submit" class="i-am-done" data-index="0">I'm Done!</button>
 </div> 
 
 <div id="howToVideo">
