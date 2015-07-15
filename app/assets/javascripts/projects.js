@@ -59,6 +59,7 @@ function showInstructions(id) {
 
 $(document).ready(function(){
 
+
   console.log("document ready");
 
   $("#go-back").hide();
@@ -81,18 +82,25 @@ $(document).ready(function(){
     // then when "I'm done" button is clicked, add one to data-index like this:
     var currentIndex = $(this).data("index");
     $(this).data("index", currentIndex+1);
+    console.log(currentIndex);
     var instructionsIndex = $(this).data("index");
 
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">how</button>');
   });
     
-  // $("body").on("click", '#go-back', function(){
-  //   var currentIndex = $(this).data("index");
-  //   $(this).data("index", currentIndex-1);
-  //   var instructionsIndex = $(this).data("index");
+  $("body").on("click", '#go-back', function(){
 
-  //   $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex - 1) + '">how</button>');
-  // });
+    var currentIndex = $('#next-stage').data("index");
+    $('#next-stage').data("index", currentIndex - 1);
+
+    console.log(currentIndex);
+
+
+    $('#instructions-list li:last').remove();
+    $('#instructions-list button:last').remove();
+
+
+  });
 
   $("#howToVideo").hide();
 
