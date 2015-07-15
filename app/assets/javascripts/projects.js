@@ -96,14 +96,20 @@ $(document).ready(function(){
 
   $("body").on("click", ".js-howto", function(e){
       console.log("clicked the how");
-      console.log($(this).data('id'));
-      $("#howToVideo").show();
+      var currentHowToId = ($(this).data('id'))
+
+  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '"></iframe>').html(currentInstructions[currentHowToId].info_video));
+  console.log(currentInstructions[currentHowToId].info_video);
+  
+  $("#howToVideo").show();
 
   });
 
   $("body").on("click", '.i-know-how', function(){
     console.log("click to close");
-    // $("#howToVideo").dialog( "close" );
+
+    //here i need to delete video so that it can be repopulated with new video...
+
     $("#howToVideo").hide();
   });
 });
