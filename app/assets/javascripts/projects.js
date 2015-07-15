@@ -16,13 +16,6 @@ function projectOverview() {
   });
 }
 
-
-function showSidebar() {
-  $(".navbar-header").toggle(function() {
-    $(".navbar-header").css("right", "0px")   
-  }) 
-}
-
 function nextInstructions() {
   $("#next-stage").on("click", function(){
     console.log("clicked!");
@@ -57,6 +50,9 @@ function showInstructions(id) {
     // data is all of the instructions
     // populate right hand div with data[0] info
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[0].content)).append('<button class="js-howto" data-id="0">how</button>');
+
+    $('.stage').html(currentInstructions[0].stage_id)
+
     
   })
 }
@@ -90,16 +86,28 @@ $(document).ready(function(){
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">how</button>');
   });
     
+  // $("body").on("click", '#go-back', function(){
+  //   var currentIndex = $(this).data("index");
+  //   $(this).data("index", currentIndex-1);
+  //   var instructionsIndex = $(this).data("index");
 
+  //   $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex - 1) + '">how</button>');
+  // });
 
   $("#howToVideo").hide();
 
   $("body").on("click", ".js-howto", function(e){
       console.log("clicked the how");
+
+
       var currentHowToId = ($(this).data('id'))
 
-  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '"></iframe>').html(currentInstructions[currentHowToId].info_video));
-  console.log(currentInstructions[currentHowToId].info_video);
+
+  $('#howToVideo').append($('<h1 class="howToTitle"> Here is how! </h1>'));
+
+  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="400" width="600"></iframe>').html(currentInstructions[currentHowToId].info_video));
+
+  $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
   
   $("#howToVideo").show();
 
@@ -111,6 +119,7 @@ $(document).ready(function(){
     //here i need to delete video so that it can be repopulated with new video...
 
     $("#howToVideo").hide();
+    $("#howToVideo").empty();
   });
 });
 

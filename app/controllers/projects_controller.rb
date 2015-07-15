@@ -11,6 +11,8 @@ class ProjectsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @instructions }
     end
+
+    
   end
 
 end

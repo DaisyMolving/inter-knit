@@ -6,7 +6,7 @@
   </ul>
 </nav>
 
-<h1 class="project-title"><%= @project.name %> : <%= @project_stage.first.title %> </h1>
+<h1 class="project-title"><%= @project.name %> : <span class="stage"></span></h1>
 
 
 <div id="projectOverview">
@@ -15,7 +15,8 @@
   <img src="http://jennozkan.com/wp-content/uploads/2010/12/crochet-scarf-7.jpg">
   <button class="closeModal" data-id="<%= @project.id %>">Let's start!</button>
 </div> 
- 
+
+
 
 <div class="navbar-header">
   <h1>Instructions</h1>
@@ -31,8 +32,5 @@
 </div> 
 
 <div id="howToVideo">
-  <h1 class="howToTitle"> Here is how! </h1>
-  <button id="got-it" type="submit" class="i-know-how">
-  Ok, I understand!
-  </button>
+  
 </div>
