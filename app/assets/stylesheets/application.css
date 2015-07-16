@@ -1,3 +1,7 @@
+body {
+  background-color: #f9eee9;
+}
+
 .project-title {
   background-color: orange;
   padding: 2px;
@@ -45,4 +49,59 @@
 .show-page-nav-item {
   display: inline;
   padding: 50px;
+}
+
+#main-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 5px;
+  padding: 2px;
+}
+
+#main-interknit {
+  text-align: center;
+  font-size: 70px;
+  margin: 10px;
+}
+
+#tag-line {
+  text-align: center;
+  font-size: 30px;
+}
+
+#projects-title {
+  text-align: center;
+  font-size: 22px;
+}
+
+.here-are-projects {
+  position: relative;
+  text-align: center;
+  display: inline;
+}
+
+.projects_list {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center !important;
+  display: inline-block;
+}
+
+.project-list-item {
+  a { 
+    display: inline;
+    padding: 50px;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+.notice {
+  text-align: center;
+  font-size: 22px;
+  color: #ff3300;
 }

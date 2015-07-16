@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>InterKnit</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
@@ -30,6 +30,13 @@
  <%= link_to('Register', new_user_registration_path)  %>
  </li>
 <% end %>
+
+<% if user_signed_in? %>
+ <li>You are logged in as: <%= current_user.email%> <br>
+ <%= link_to 'View My Projects', current_user  %> 
+ </li>
+<% end %>
+
 
 
 <%= yield %>

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :stages
   resources :instructions
 
+  get '/users/:id', to: 'users#show', as: 'user'
+
 end
 
 

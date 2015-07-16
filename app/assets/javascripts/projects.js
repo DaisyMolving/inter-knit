@@ -85,7 +85,11 @@ $(document).ready(function(){
     console.log(currentIndex);
     var instructionsIndex = $(this).data("index");
 
+    setTimeout(appendThingy, 2000);
+
+    function appendThingy(){
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">how</button>');
+  }
   });
     
   $("body").on("click", '#go-back', function(){

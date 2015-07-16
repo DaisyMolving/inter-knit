@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
   # this is a GET
   def show
-    @user = User.find(params[:id])
-    @user_projects = UserProject.where(user_id: @user.id)    
+    @user = current_user
+    @projects = current_user.projects  
   end
 
   # GET

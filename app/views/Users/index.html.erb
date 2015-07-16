@@ -1,22 +1,21 @@
-<nav>
-  <ul>
-    <li><a href="/">All Projects</a></li>
-    <li><a href="">My Projects</a></li>
-  </ul>
-</nav>
 
+<h1 id="main-title">Welcome to the </h1>
 
+<h2 id="main-interknit">Inter-knit!</h2>
 
-<h1>Welcome to the Inter-knit!</h1>
+<h3 id="tag-line">Where Everyone Can Learn to Knit</h3>
+
+<h4 id="projects-title">Available Projects</h4>
 
 
 
 <% @projects.each do | project | %>
 
-
+<div class="here-are-projects">
   <ul class="projects_list">
-    <li><%= link_to(project.name, project_path(project)) %></li>
+    <li class="project-list-item"><%= link_to(project.name, project_path(project)) %></li>
   </ul>
+</div>  
 
 <% end %>
   
