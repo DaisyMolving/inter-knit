@@ -1,6 +1,6 @@
 <nav id="show-page-navigation">
   <ul class="nav-list-show">
-    <li class="show-page-nav-item"><a href="">Go To My Projects</a></li>
+    <li class="show-page-nav-item"><%= link_to 'Go To My Projects', current_user  %></li>
     <li class="show-page-nav-item"><a href="">View All Stages of This Project</a></li> 
     <li class="show-page-nav-item"><a href="/">Choose Another Project</a></li> 
   </ul>
@@ -12,7 +12,7 @@
 <div id="projectOverview">
   <h1 class="modal-title"><%= @project.name %></h1>
   <h2 class="modal-level"> Difficulty Level: <%= @project.difficulty_level %> </h2>
-  <img src="http://jennozkan.com/wp-content/uploads/2010/12/crochet-scarf-7.jpg">
+  <img src=>
   <button class="closeModal" data-id="<%= @project.id %>">Let's start!</button>
 </div> 
 

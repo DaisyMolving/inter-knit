@@ -1,24 +1,26 @@
 
-<h1 id="main-title">Welcome to the </h1>
+  <h1 id="main-title">Welcome to the </h1>
 
-<h2 id="main-interknit">Inter-knit!</h2>
+<div class="home-container">
 
-<h3 id="tag-line">Where Everyone Can Learn to Knit</h3>
+  <img id="main-interknit" src="/assets/interknit_title.png">
 
-<h4 id="projects-title">Available Projects</h4>
+  <h3 id="tag-line">Where Everyone Can Learn to Knit</h3>
+
+  <h4 id="projects-title">Available Projects</h4>
 
 
 
-<% @projects.each do | project | %>
+  <% @projects.each do | project | %>
 
-<div class="here-are-projects">
-  <ul class="projects_list">
-    <li class="project-list-item"><%= link_to(project.name, project_path(project)) %></li>
-  </ul>
-</div>  
+  <div class="here-are-projects">
+    <ul class="projects_list">
+      <li class="project-list-item"><%= link_to(project.name, project_path(project)) %></li>
+    </ul>
+  </div>  
 
-<% end %>
-  
+  <% end %>
+</div>   
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

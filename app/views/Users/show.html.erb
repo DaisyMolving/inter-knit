@@ -1,5 +1,8 @@
-<h1>User show page!</h1>
-<h2> <%=@user.email%> is logged in.</h2>
+
+<h1 class="welcome-user"> Welcome, <%=@user.email%> !</h1>
+
+<h2 class="my-projects-title">My Projects</h2>
+
 <% @projects.each do |project| %>
   <h3><%= link_to(project.name, project_path(project)) %></h3>
 <% end %>

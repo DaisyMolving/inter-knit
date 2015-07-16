@@ -6,37 +6,42 @@
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
 </head>
 <body>
 
+
+<div class="application_container">
 <% if user_signed_in? %>
- <li>
+ <li class ="logout">
  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
  </li>
 <% else %>
- <li>
+ <li class="login">
  <%= link_to('Login', new_user_session_path)  %>  
  </li>
 <% end %>
 
 <% if user_signed_in? %>
- <li>
- <%= link_to('Edit registration', edit_user_registration_path) %>
+ <li class="edit-registration">
+ <%= link_to('Edit Registration', edit_user_registration_path) %>
  </li>
 <% else %>
- <li>
+ <li class="register">
  <%= link_to('Register', new_user_registration_path)  %>
  </li>
 <% end %>
 
+</div>
+
 <% if user_signed_in? %>
- <li>You are logged in as: <%= current_user.email%> <br>
+ <li class="my-projects-link">You are logged in as: <%= current_user.email%>
  <%= link_to 'View My Projects', current_user  %> 
  </li>
 <% end %>
-
 
 
 <%= yield %>

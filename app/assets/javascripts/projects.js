@@ -51,7 +51,7 @@ function showInstructions(id) {
     // populate right hand div with data[0] info
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[0].content)).append('<button class="js-howto" data-id="0">how</button>');
 
-    $('.stage').html(currentInstructions[0].stage_id)
+    $('.stage').html(currentInstructions[0].name)
 
     
   })
@@ -76,19 +76,26 @@ $(document).ready(function(){
     $("#projectOverview").dialog( "close" );
     var id = $(this).data("id");
     showInstructions(id);
+    
   });
 
   $("body").on("click", '#next-stage', function(){
     // then when "I'm done" button is clicked, add one to data-index like this:
     var currentIndex = $(this).data("index");
     $(this).data("index", currentIndex+1);
-    console.log(currentIndex);
     var instructionsIndex = $(this).data("index");
 
-    setTimeout(appendThingy, 2000);
+
+    $('.stage').html(currentInstructions[instructionsIndex].name)
+    
+    if (instructionsIndex === 4) {
+      $('body').append($('<img id="wool-done" src="/assets/wool-done-red.png">'));
+    }
+
+    setTimeout(appendThingy, 1000);
 
     function appendThingy(){
-    $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">how</button>');
+    $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">How?</button>');
   }
   });
     
@@ -96,13 +103,13 @@ $(document).ready(function(){
 
     var currentIndex = $('#next-stage').data("index");
     $('#next-stage').data("index", currentIndex - 1);
-
-    console.log(currentIndex);
+    var instructionsIndex = $(this).data("index");
 
 
     $('#instructions-list li:last').remove();
     $('#instructions-list button:last').remove();
 
+    $('.stage').html(currentInstructions[currentIndex -1].name)
 
   });
 
