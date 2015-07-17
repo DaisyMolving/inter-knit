@@ -49,7 +49,7 @@ function showInstructions(id) {
 
     // data is all of the instructions
     // populate right hand div with data[0] info
-    $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[0].content)).append('<button class="js-howto" data-id="0">how</button>');
+    $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[0].content)).append('<button class="js-howto" data-id="0">How?</button>');
 
     $('.stage').html(currentInstructions[0].name)
 
@@ -76,7 +76,9 @@ $(document).ready(function(){
     $("#projectOverview").dialog( "close" );
     var id = $(this).data("id");
     showInstructions(id);
-    
+
+    $("#current-projects").append($('<li><%= @project.name %> hello</li>'));
+
   });
 
   $("body").on("click", '#next-stage', function(){
@@ -124,9 +126,11 @@ $(document).ready(function(){
 
   $('#howToVideo').append($('<h1 class="howToTitle"> Here is how! </h1>'));
 
+   $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
+
   $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="400" width="600"></iframe>').html(currentInstructions[currentHowToId].info_video));
 
-  $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
+  
   
   $("#howToVideo").show();
 

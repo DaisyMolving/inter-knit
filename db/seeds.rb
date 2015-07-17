@@ -18,8 +18,8 @@ project2 = Project.create(name: "Pullover", difficulty_level: 3)
 
 project3 = Project.create(name: "Beanie", difficulty_level: 2)
 
-stage1 = Stage.create(title: "Casting on", image: "scarf_casting_on")
-stage2 = Stage.create(title: "Second row", image: "knitting_scarf_rows")
+stage1 = Stage.create(title: "Casting on", image: "/assets/step-one-scarf.png")
+stage2 = Stage.create(title: "Second row", image: "/assets/scarf-step-2.png")
 stage3 = Stage.create(title: "Continuing", image: "lengthening scarf")
 stage4 = Stage.create(title: "Casting off",  image: "casting_off_scarf")
 

@@ -1,8 +1,25 @@
+<ul class="my-projects-nav">
 
-<h1 class="welcome-user"> Welcome, <%=@user.email%> !</h1>
+  <li class="link-home"><a href="/">Choose Another Project</a></li>
+  <li class="welcome-user"> Welcome, <%=@user.email%> !</li>
+  
+</ul>
 
 <h2 class="my-projects-title">My Projects</h2>
 
 <% @projects.each do |project| %>
   <h3><%= link_to(project.name, project_path(project)) %></h3>
 <% end %>
+
+<div id="projects-container"> 
+  <ul id="current-projects">
+
+  </ul>
+
+<img class="finito" src="/assets/finito.png">
+
+<img class="continue" src="/assets/continue.png">
+
+<img class="do-next" src="/assets/do-next.png">
+
+</div>

@@ -5,12 +5,11 @@ body {
 
 .project-title {
   background-color: #42B0EE;
-  padding: 2px;
   width: 100%;
   font-size: 50px;
   padding-left: 20px;
   margin-bottom: 0px;
-  color: black;
+  color: #000000;
 }
 
 .stage {
@@ -24,6 +23,7 @@ body {
 
 .modal-title {
   margin: 0px;
+  color: #42B0EE;
 }
 
 .navbar-header {
@@ -87,6 +87,7 @@ body {
 #projects-title {
   text-align: center;
   font-size: 22px;
+  color: #ff3300;
 }
 
 .here-are-projects {
@@ -102,17 +103,16 @@ body {
   padding-right: 160px;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align: center !important;
   display: inline-block;
+  background-color: #42B0EE;
+  text-decoration: none;
 }
 
 .project-list-item {
-  a { 
     display: inline;
-    padding: 50px;
-    font-size: 22px;
     text-align: center;
-  }
+    color: #ff3300;
+    text-decoration: none;
 }
 
 .notice {
@@ -133,20 +133,24 @@ body {
 
 .logout {
   display: inline;
+  color: #ff3300;
 }
 
 .login {
   display: inline;
+  color: #ff3300;
 }
 
 .register {
   display: inline;
   margin-left: 30px;
+  color: #ff3300;
 }
 
 .edit-registration {
   display: inline;
   margin-left: 30px;
+  color: #ff3300;
 }
 
 .my-projects-link {
@@ -154,6 +158,7 @@ body {
   float: right;
   margin-top: -60px;
   margin-right: 15px;
+  color: #ff3300;
 }
 
 .welcome-user {
@@ -161,11 +166,13 @@ body {
   background-color: #42B0EE;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-left: -40px;
+  padding-left: 20px;
 }
 
 .my-projects-title {
   font-size: 40px;
-  color: #42B0EE;
+  color: #ff3300;
   margin-top: 0px;
   padding: 0px;
 }
@@ -175,4 +182,69 @@ body {
   position: absolute;
   margin-left: 530px;
   margin-top: -90px;
+}
+
+#projects-container {
+  text-align: center;
+}
+
+.finito {
+  width: 270px;
+  margin: 50px;
+  margin-top: 150px;
+}
+
+.continue {
+  width: 270px;
+  margin: 50px;
+  margin-top: 150px;
+}
+
+.do-next {
+  width: 270px;
+  margin: 50px;
+  margin-top: 150px;
+}
+
+.link-home {
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.my-projects-nav {
+  list-style-type: none;
+}
+
+#scarf-user-pic {
+  height: 370px;
+  border: #42B0EE 7px solid;
+}
+
+.closeModal {
+  position: absolute;
+  margin-top: 400px;
+  margin-left: -310px;
+  color: #ff3300;
+  background-color: #f9eee9;
+  border: #42B0EE 5px solid;
+}
+
+.howToTitle {
+  color: #ff3300;
+}
+
+#howToVideo {
+  display: inline;
+  margin-left: 30px;
+  position: absolute;
+}
+
+#got-it {
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 493px;
+  color: #42B0EE;
+  border: #ff3300 3px solid;
+  background-color: #f9eee9;
 }
