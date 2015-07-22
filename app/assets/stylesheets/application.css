@@ -64,7 +64,7 @@ body {
 #main-title {
   text-align: center;
   font-size: 40px;
-  margin: 5px;
+  margin: 1px;
   padding: 2px;
   display: block;
   margin-top: 70px;
@@ -75,13 +75,14 @@ body {
   text-align: center;
   font-size: 70px;
   margin: 10px;
-  width: 60%;
+  width: 80%;
 
 }
 
 #tag-line {
   text-align: center;
   font-size: 30px;
+  margin: 5px;
 }
 
 #projects-title {
