@@ -14,9 +14,9 @@ Instruction.delete_all
 
 project1 = Project.create(name: "Scarf", difficulty_level: 1)
 
-project2 = Project.create(name: "Pullover", difficulty_level: 3)
+project2 = Project.create(name: "Pullover", difficulty_level: 3, image: "pullover_title.png")
 
-project3 = Project.create(name: "Beanie", difficulty_level: 2)
+project3 = Project.create(name: "Beanie", difficulty_level: 2, image: "beanie_title.png")
 
 stage1 = Stage.create(title: "Casting on", image: "/assets/step-one-scarf.png")
 stage2 = Stage.create(title: "Second row", image: "/assets/scarf-step-2.png")
