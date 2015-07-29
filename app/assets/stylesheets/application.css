@@ -249,3 +249,55 @@ body {
   border: #ff3300 3px solid;
   background-color: #f9eee9;
 }
+
+.devise-log-in {
+  color: #3F357C;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 40px;
+
+}
+
+#login-form {
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-right: 25%;
+  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-left:70px;
+  padding-right: 70px;
+  background-color:  rgba(225, 155, 67, 0.3);
+  border: #E19B43 10px double;
+  border-radius: 30px;
+}
+
+.email-field {
+  color:  #3F357C;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.password-field {
+  color:  #3F357C;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.remember-me-field {
+  color:  #3F357C;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.login-actions {
+  color: #3F357C;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.login-options a {
+  color: #E19B43;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
