@@ -12,11 +12,11 @@ Stage.delete_all
 Instruction.delete_all
 
 
-project1 = Project.create(name: "Scarf", difficulty_level: 1, image: "scarf_title.png", modal_image: , description: )
+project1 = Project.create(name: "Scarf", difficulty_level: 1, image: "scarf_title.png", modal_image: , description: "Let's start basic but bold with a nice scarf!")
 
-project2 = Project.create(name: "Pullover", difficulty_level: 3, image: "pullover_title.png", modal_image: , description: )
+project2 = Project.create(name: "Pullover", difficulty_level: 3, image: "pullover_title.png", modal_image: , description: "Here's the big one, a super-great, warm pullover!")
 
-project3 = Project.create(name: "Beanie", difficulty_level: 2, image: "beanie_title.png", modal_image: , description: )
+project3 = Project.create(name: "Beanie", difficulty_level: 2, image: "beanie_title.png", modal_image: , description: "Keep your head warm, keep your head wonderful.")
 
 stage1 = Stage.create(title: "Casting on", image: "/assets/step-one-scarf.png")
 stage2 = Stage.create(title: "Second row", image: "/assets/scarf-step-2.png")
