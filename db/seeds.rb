@@ -18,13 +18,13 @@ project2 = Project.create(name: "Pullover", difficulty_level: 3, image: "pullove
 
 project3 = Project.create(name: "Beanie", difficulty_level: 2, image: "beanie_title.png", modal_image: "beanie/modal", description: "Keep your head warm, keep your head wonderful.")
 
-stage1 = Stage.create(title: "Casting on", image: "/assets/step-one-scarf.png")
-stage2 = Stage.create(title: "Second row", image: "/assets/scarf-step-2.png")
-stage3 = Stage.create(title: "Continuing", image: "lengthening scarf")
-stage4 = Stage.create(title: "Casting off",  image: "casting_off_scarf")
+stage1 = Stage.create(title: "Casting on") 
+stage2 = Stage.create(title: "Second row")
+stage3 = Stage.create(title: "Continuing")
+stage4 = Stage.create(title: "Casting off")
 
 
-instruction1 = Instruction.create(name: "Casting On", content: "Using 8 ply wool and size 10 needles, cast on 35 stitches.", info_video: "/assets/casting_on.m4v")
+instruction1 = Instruction.create(name: "Casting On", content: "Using 8 ply wool and size 10 needles, cast on 35 stitches.", info_video: "/assets/casting_on.m4v", image: "/assets/cast-on-instruction-diagrams")
 instruction2 = Instruction.create(name: "First Row", content: "When you finish casting on the 35 stitches, put the needle that you have been casting onto into your left hand, and insert your empty needle into the back of the first loop that you have made opposite.", info_video: "/assets/switching_over_and_second_row.m4v")
 instruction3 = Instruction.create(name: "First Row", content: "Knit to the end of the row! Go on, you can do it! Take it slowly", info_video: "/assets/knit_knit_knit.m4v")
 instruction4 = Instruction.create(name: "Knit, Knit, Knit!", content: "Now repeat until you have knitted 300 rows, or reached your desired scarf length", info_video: "/assets/knit_knit_knit.m4v")
