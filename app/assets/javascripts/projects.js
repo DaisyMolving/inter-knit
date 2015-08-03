@@ -92,6 +92,14 @@ $(document).ready(function(){
     
     if (instructionsIndex === 4) {
       $('body').append($('<img id="wool-done" src="/assets/wool-done-red.png">'));
+      $.ajax({
+        method: 'POST',
+        url: '/user_projects',
+        data: {project_id: $('.project-title').data('project-id')},
+        dataType: 'json'
+      }).done(function(data){
+        console.log(data);
+      })
     }
 
     setTimeout(appendThingy, 1000);
