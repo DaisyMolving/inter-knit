@@ -136,7 +136,7 @@ $(document).ready(function(){
 
    $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
 
-  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="400" width="600"></iframe>').html(currentInstructions[currentHowToId].info_video));
+  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="265" width="468" class="video-frame"></iframe>').html(currentInstructions[currentHowToId].info_video));
 
   
   
