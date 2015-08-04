@@ -24,7 +24,7 @@ stage3 = Stage.create(title: "Continuing")
 stage4 = Stage.create(title: "Casting off")
 
 
-instruction1 = Instruction.create(name: "Casting On", content: "Using 8 ply wool and size 10 needles, cast on 35 stitches.", info_video: "/assets/casting_on.m4v", image: "/assets/cast-on-instruction-diagrams")
+instruction1 = Instruction.create(name: "Casting On", content: "Using 8 ply wool and size 10 needles, cast on 35 stitches.", info_video: "/assets/casting_on.m4v", image: "/assets/cast-on-instruction-diagrams.png")
 instruction2 = Instruction.create(name: "First Row", content: "When you finish casting on the 35 stitches, put the needle that you have been casting onto into your left hand, and insert your empty needle into the back of the first loop that you have made opposite.", info_video: "/assets/switching_over_and_second_row.m4v")
 instruction3 = Instruction.create(name: "First Row", content: "Knit to the end of the row! Go on, you can do it! Take it slowly", info_video: "/assets/knit_knit_knit.m4v")
 instruction4 = Instruction.create(name: "Knit, Knit, Knit!", content: "Now repeat until you have knitted 300 rows, or reached your desired scarf length", info_video: "/assets/knit_knit_knit.m4v")

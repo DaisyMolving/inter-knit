@@ -51,14 +51,19 @@ function showInstructions(id) {
     // populate right hand div with data[0] info
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[0].content)).append('<button class="js-howto" data-id="0">How?</button>');
 
+    $('#stage-image').append($('<img id="current-instructions-image" src="' + currentInstructions[0].image + '">'));
+
+
     $('.stage').html(currentInstructions[0].name)
 
     
   })
 }
 
+
 $(document).ready(function(){
 
+ 
 
   console.log("document ready");
 
@@ -76,9 +81,7 @@ $(document).ready(function(){
     $("#projectOverview").dialog( "close" );
     var id = $(this).data("id");
     showInstructions(id);
-
-    $("#current-projects").append($('<li><%= @project.name %> hello</li>'));
-
+   
   });
 
   $("body").on("click", '#next-stage', function(){
@@ -89,6 +92,7 @@ $(document).ready(function(){
 
 
     $('.stage').html(currentInstructions[instructionsIndex].name)
+
     
     if (instructionsIndex === 4) {
       $('body').append($('<img id="wool-done" src="/assets/wool-done-red.png">'));
@@ -106,8 +110,12 @@ $(document).ready(function(){
 
     function appendThingy(){
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">How?</button>');
-  }
+    }
+
+
   });
+
+
     
   $("body").on("click", '#go-back', function(){
 
@@ -123,24 +131,28 @@ $(document).ready(function(){
 
   });
 
+
+
   $("#howToVideo").hide();
+
 
   $("body").on("click", ".js-howto", function(e){
       console.log("clicked the how");
 
+    $("#stage-image").hide();
 
       var currentHowToId = ($(this).data('id'))
 
 
-  $('#howToVideo').append($('<h1 class="howToTitle"> Here is how! </h1>'));
+    $('#howToVideo').append($('<h1 class="howToTitle"> Here is how! </h1>'));
 
-   $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
+    $('#howToVideo').append($('<button id="got-it" type="submit" class="i-know-how">I Understand</button>'));
 
-  $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="265" width="468" class="video-frame"></iframe>').html(currentInstructions[currentHowToId].info_video));
+    $('#howToVideo').append($('<iframe src="' + currentInstructions[currentHowToId].info_video + '" height="265" width="468" class="video-frame"></iframe>').html(currentInstructions[currentHowToId].info_video));
 
   
   
-  $("#howToVideo").show();
+    $("#howToVideo").show();
 
   });
 
@@ -151,6 +163,7 @@ $(document).ready(function(){
 
     $("#howToVideo").hide();
     $("#howToVideo").empty();
+    $("#stage-image").show();
   });
 });
 

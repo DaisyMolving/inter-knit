@@ -231,6 +231,12 @@ body {
   border: #42B0EE 5px solid;
 }
 
+#current-instructions-image {
+    width: 700px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
 .howToTitle {
   color: #5ED68C;
 }
