@@ -90,12 +90,30 @@ $(document).ready(function(){
     $(this).data("index", currentIndex+1);
     var instructionsIndex = $(this).data("index");
 
+    console.log(instructionsIndex);
 
-    $('.stage').html(currentInstructions[instructionsIndex].name)
+    $('.stage').html(currentInstructions[instructionsIndex].name);
 
-    
+    if (instructionsIndex === 1) {
+    $('#stage-image').empty();
+    $('#stage-image').html('<img id="current-instructions-image-2" src="/assets/knit-knit-knit.png">');
+    }
+
+    if (instructionsIndex === 2) {
+    $('#stage-image').empty();
+    $('#stage-image').html('<img id="current-instructions-image-3" src="/assets/knit-stage-2.png">');
+    }
+
+    if (instructionsIndex === 3) {
+    $('#stage-image').empty();
+    $('#stage-image').html('<img id="current-instructions-image-4" src="/assets/knit-stage-4.png">');
+    }
+
+       
     if (instructionsIndex === 4) {
       $('body').append($('<img id="wool-done" src="/assets/wool-done-red.png">'));
+       $('#stage-image').empty();
+      $('#stage-image').html('<img id="current-instructions-image-5" src="/assets/scarf_stage_5.png">');
       $.ajax({
         method: 'POST',
         url: '/user_projects',
@@ -112,24 +130,28 @@ $(document).ready(function(){
     $('#instructions-list').append($('<li id="instruction-list-item"></li>').html(currentInstructions[instructionsIndex].content)).append('<button class="js-howto" data-id="' + (currentIndex + 1) + '">How?</button>');
     }
 
-
   });
 
-
-    
+  
   $("body").on("click", '#go-back', function(){
 
-    var currentIndex = $('#next-stage').data("index");
-    $('#next-stage').data("index", currentIndex - 1);
-    var instructionsIndex = $(this).data("index");
+    currentIndex = $('#next-stage').data("index");
+      $('#next-stage').data("index", currentIndex - 1);
+    instructionsIndex = $(this).data("index");
 
 
     $('#instructions-list li:last').remove();
     $('#instructions-list button:last').remove();
 
-    $('.stage').html(currentInstructions[currentIndex -1].name)
+    $('.stage').html(currentInstructions[instructionsIndex].name);
 
+    $('#stage-image').empty();
+    $('#stage-image').append($('<img id="current-instructions-image" src="' + currentInstructions[currentIndex - 1].image + '">'));
+
+    console.log(instructionsIndex);
   });
+    
+  
 
 
 

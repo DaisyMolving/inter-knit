@@ -24,7 +24,8 @@ body {
 
 .modal-title {
   margin: 0px;
-  color: #42B0EE;
+  color: #3F357C;
+  font-size: 50px;
 }
 
 .navbar-header {
@@ -42,7 +43,7 @@ body {
   line-height: center;
   padding: 1px;
   font-size: 22px;
-  background-color: #f9eee9;
+  background-image: url("/assets/video_div_background.png");
   font-family: 'Lato', sans-serif;
 }
 
@@ -218,23 +219,48 @@ body {
 }
 
 #scarf-user-pic {
-  height: 370px;
-  border: #42B0EE 7px solid;
+  height: 400px;
+  
 }
 
 .closeModal {
   position: absolute;
   margin-top: 400px;
-  margin-left: -310px;
-  color: #ff3300;
+  margin-left: -200px;
   background-color: #f9eee9;
-  border: #42B0EE 5px solid;
+  color: #42B0EE;
+  border: #FDC26F 3px solid;
 }
 
 #current-instructions-image {
     width: 700px;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+#current-instructions-image-2 {
+    width: 200px;
+    margin-top: 300px;
+    margin-left: 270px;
+}
+
+#current-instructions-image-3 {
+    width: 230px;
+    margin-top: 200px;
+    margin-left: 270px;
+}
+
+#current-instructions-image-4 {
+    width: 230px;
+    margin-top: 140px;
+    margin-left: 270px;
+}
+
+#current-instructions-image-5 {
+    width: 240px;
+    margin-top: 60px;
+    margin-left: 270px;
+    position: absolute;
 }
 
 .howToTitle {
